@@ -1,7 +1,7 @@
 %define rname ldap
 %define name ruby-%{rname}
 %define version 0.9.7
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Ruby extension library for accessing LDAP API
 Name: %{name}
