@@ -11,6 +11,7 @@ URL: http://ruby-ldap.sourceforge.net/
 Source0: http://ovh.dl.sourceforge.net/sourceforge/ruby-ldap/ruby-%{rname}-%{version}.tar.bz2
 License: BSD-like
 Group: Development/Ruby
+BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: ruby >= 1.8
 BuildRequires: ruby-devel openldap-devel
 
