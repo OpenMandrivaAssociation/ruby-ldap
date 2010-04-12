@@ -1,7 +1,7 @@
 %define rname ldap
 %define name ruby-%{rname}
-%define version 0.9.7
-%define release %mkrel 7
+%define version 0.9.8
+%define release %mkrel 1
 
 Summary: Ruby extension library for accessing LDAP API
 Name: %{name}
@@ -9,6 +9,7 @@ Version: %{version}
 Release: %{release}
 URL: http://ruby-ldap.sourceforge.net/
 Source0: http://ovh.dl.sourceforge.net/sourceforge/ruby-ldap/ruby-%{rname}-%{version}.tar.bz2
+Patch0: ruby-ldap-0.9.7-openldap.patch
 License: BSD-like
 Group: Development/Ruby
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -24,6 +25,7 @@ This package is build with OpenLDAP2.
 
 %prep
 %setup -q 
+%patch0 -p1
 
 %build
 ruby extconf.rb
@@ -33,7 +35,7 @@ chmod 0755 example/cgi/search.cgi
 
 %install
 rm -rf %buildroot
-%makeinstall
+%makeinstall_std
 
 %clean
 rm -rf %buildroot
