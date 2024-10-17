@@ -7,7 +7,7 @@ Summary: Ruby extension library for accessing LDAP API
 Name: %{name}
 Version: %{version}
 Release: %{release}
-URL: http://ruby-ldap.sourceforge.net/
+URL: https://ruby-ldap.sourceforge.net/
 Source0: http://ovh.dl.sourceforge.net/sourceforge/ruby-ldap/ruby-%{rname}-%{version}.tar.bz2
 Patch0: ruby-ldap-0.9.7-openldap.patch
 License: BSD-like
